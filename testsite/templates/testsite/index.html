@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <title>TestSite Page Index</title>
+    </head>
+    <body>
+        {% if pages_list %}
+            <ul>
+                {% for page in pages_list %}
+                    <li><a href="/testsite/{{ page.id }}/">{{ page.heading_text }}</a></li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>No Pages</p>
+        {% endif %}
+    </body>
+</html>
